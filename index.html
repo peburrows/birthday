@@ -217,11 +217,16 @@
       updateTitle(true);
     });
 
-    $song.on('ended, pause', function(){
+    $song.on('pause', function(){
       isPlaying = false;
       titleTimeout = setTimeout(function(){
         updateTitle(false);
       }, 1000);
+    });
+
+    $song.on('ended', function(){
+      isPlaying = false;
+      updateTitle(false);
     });
 
     var updateTitle = function(playing, title){

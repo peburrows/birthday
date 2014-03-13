@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Phil's 30th Birthday Party!</title>
+  <link rel="stylesheet" href="fonts/stylesheet.css">
+  <link rel="stylesheet" href="fonts/dense/stylesheet.css">
+  <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <style type="text/css">
+    body {
+      margin: 0 auto;
+      font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+      color: rgb(130, 130, 130);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+     font-family: "denseregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+     text-transform: uppercase;
+     text-align: center;
+    }
+
+    .content { margin-top: -100px; }
+
+    .content p {
+      font-size: 21px;
+    }
+
+    .content dl {
+      font-size: 16px;
+    }
+    dl dt { color: #000; font-weight: normal; font-style: italic;  }
+    dl dd { margin-bottom: 20px; }
+
+    #header-img {
+      width: 100%;
+    }
+    .header {
+      text-align: center;
+      height: 400px;
+      background: transparent url(30years-blur.jpg) no-repeat bottom center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    #header-text-wrapper h1 {
+      font-size: 4.8rem;
+      /*color: rgba(97, 146, 243, 0.5);*/
+      /*color: rgba(0, 30, 20, .6);*/
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px 0px rgba(120,120,120, 1);
+    }
+
+    #play-pause { margin-bottom: 0; }
+    #progress {
+      width: 100%;
+      height: 3px;
+      background: #ffcc00;
+    }
+    #progress .inner {
+      background: #008cba;
+      height: 100%;
+      width: 0;
+    }
+
+    iframe {
+      height: 300px;
+      border-top: 3px solid #ffdd9e;
+      margin-top: 30px;
+    }
+
+    #lyrics p {
+      font-size: 16px;
+      margin-left: 10px;
+      padding-left: 20px;
+      border-left: 3px solid #d4d2d8;
+    }
+
+    @media only screen and (min-width: 40.063em) {
+      .header {
+        height: 700px;
+        margin-bottom: 30px;
+      }
+      #header-text-wrapper {
+        bottom: 60px;
+      }
+      #header-text-wrapper h1 {
+        font-size: 9rem;
+      }
+      iframe {
+        height: 500px;
+      }
+      .content {
+        margin-top: -200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header" id="header">
+    <!-- <img id="header-img" src="30years-blur.jpg"/> -->
+  </div>
+  <div class="content" id="content">
+    <div id="header-text-wrapper"><h1>You're Invited!</h1></div>
+
+    <div class="row">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <p>I'm having a birthday party this Saturday, March 15,
+        and I'd love if you could come. Here, I even wrote you a song:</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column large-offset-3 large-6 medium-offset-3 medium-6 end">
+        <p><a href="#play-pause" id="play-pause" class="button expand radius">Play The Song</a></p>
+        <!-- <div id="progress"><div class="inner"></div></div> -->
+        <audio id="song">
+          <source src="party.m4a" />
+          <source src="party.mp3" />
+        </audio>
+      </div>
+    </div>
+
+    <div class="row" id="lyrics">
+      <div class="column large-offset-3 large-6 medium-offset-3 medium-6 end">
+        <p><em>I'm having a birthday party, and you're invited, all!
+        Your presence is your present, so come both big and small.
+        We can't all be forever young, sometimes we have to age.
+        And I am turning 30, so some commiserate! (<a href="party.mp3">Download</a>)</em></p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <h2>Who</h2>
+        <p>Well, it's a birthday party for me.
+        But it's also for you. And your friends. Bring anyone and everyone.
+        Seriously. I don't care if they know me or not, they should come and have a good time.
+        </p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <h2>What</h2>
+        <p>Um, a birthday party. For my <em>30th</em> birthday.</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <h2>Where <small>&amp;</small> When</h2>
+        <p>The party starts at 7:00 pm on Saturday, March 15,
+        and will be hosted at Cody and Juli Waits' house:
+        4&nbsp;Serenity&nbsp;Dr., Little&nbsp;Rock (<a href="#map">map below</a>).</p>
+        <p>Think that's gonna be too hard for you to remember? Here, I made you a <a href="party.ics">calendar invite</a> to add to your fancy calendar app thing on your smartyphone (or your dumb computer). It should even remind you a few hours before you have to be there.</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <h2>Why</h2>
+        <p>Because when you get to be my age, every year is a blessing &emdash; can't take any of them for granted.
+        So, let's celebrate, let's reminisce, let's laugh, let's cry. This party is chicken soup for the 30-something soul.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <h2>RSVP</h2>
+        <p>Still feel like coming after reading all that (and listening to the song)? Cool. Then you should hop over to Facebook and RSVP that shiz</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column large-offset-3 large-6 medium-offset-3 medium-6 end">
+        <a href="https://www.facebook.com/events/633679506704867" class="button secondary radius expand">RSVP on Facebook &rarr;</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column large-offset-2 large-8 medium-offset-2 medium-8 end">
+        <h2>FAQ</h2>
+        <dl>
+          <dt>Will there be food at this party?</dt>
+          <dd>You better believe it! They'll be enough food to feed the first ten people or so (and my closest friends and family if they show up late). After that, you're on your own.</dd>
+
+          <dt>Will there be drinks at this party?</dt>
+          <dd>Yeah, but also feel free to
+          <acronym title="Bring Your Own You Know What">BYOB</acronym>.</dd>
+
+          <dt>I loved the song, any chance I can get a copy?</dt>
+          <dd>Do not fret, my star-crossed lover of the lovely, lyrical melodies that lift us up to where we belong! A digital copy of the full-length song (yes, there's more to it) will be one of the party favors for all who attend!</dd>
+
+          <dt>I hated the song, why are you still wasting your time doing this kind of stuff?</dt>
+          <dd>I ask myself the same question everytime I start singing.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <iframe width='100%' id="map" frameBorder='0' src='http://a.tiles.mapbox.com/v3/peburrows.hgjo7hpi/attribution,zoompan,zoomwheel,geocoder,share.html'></iframe>
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var $song = $('audio')
+      , song  = $song[0]
+      , isPlaying = false
+      , button = $('#play-pause')
+      , titleTimeout;
+
+    $song.on('play', function(){
+      isPlaying = true;
+      updateTitle(true);
+    });
+
+    $song.on('ended, pause', function(){
+      isPlaying = false;
+      titleTimeout = setTimeout(function(){
+        updateTitle(false);
+      }, 1000);
+    });
+
+    var updateTitle = function(playing, title){
+      clearTimeout(titleTimeout);
+      if(title){ button.text(title); return; }
+      if(playing){
+        button.text('Pause The Song');
+      }else{
+        button.text('Play The Song');
+      }
+    };
+    var tries = 0;
+    button.on('click', function(e){
+      e.preventDefault();
+      if(isPlaying){
+        if(tries < 1){
+          tries++;
+          updateTitle(true, "Tricked you, you can't pause!" );
+        }else{
+          updateTitle(false, "Okay, fine.");
+          song.pause();
+        }
+      }else{
+        song.play();
+      }
+      // isPlaying ? song.pause() : song.play();
+    });
+  });
+</script>
+</body>
+</html>
